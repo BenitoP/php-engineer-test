@@ -54,12 +54,36 @@ use FlickerLeap\Square;
         <h2>Output the result of the API</h2>
 
         <?php
-            // Use the Httpful client to output the API results here.
+            $url = "https://pokeapi.co/api/v2/pokemon/mewtwo/";
+            $response = \Httpful\Request::get($url)
+            ->expectsJson()
+            ->send();
+
+            $name = $response->body->name;
+            $type = $response->body->types[0]->type->name;
+            $img = $response->body->sprites->front_default;
+
+            echo "
+                <div> 
+                    <label>Pokemon Name:</label> <label>".$name."</label> 
+                </div>";
+
+            echo "
+                <div> 
+                    <label>Pokemon Type:</label> <label>".$type."</label> 
+                </div>";
+                
+            echo "
+                <div> 
+                    <label>Pokemon Image:</label> <img src='".$img."'>
+                </div>";
         ?>
 
         <h2>Recommendations</h2>
 
-        <p><!-- Let us know how we can improve this test here --></p>
+        <p>
+        
+        </p>
 
     </body>
 </html>
