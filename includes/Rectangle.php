@@ -37,16 +37,15 @@ class Rectangle extends Shape
      */
     public function draw()
     {
-        for ($i = 0; $i < $this->sideLength; $i++)
-        {
+        for ($i = 0; $i < $this->sideLength; $i++){
             for ($j = 0; $j < $this->sideLength; $j++) {
                 if ($i == 0
                     || $j == 0
                     || $i == $this->sideLength - 1
-                    || $j == $this->sideLength * 2 - 1) {
-                    echo $this->pixel; // TODO: Fix alignment at some point
+                    || $j == $this->sideLength - 1) {
+                    echo $this->pixel . $this->padding(1); // TODO: Fix alignment at some point
                 } else {
-                    echo $this->padding(4);
+                    echo $this->padding(3);
                 }
             }
              $this->newLine();
