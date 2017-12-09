@@ -39,12 +39,16 @@ use FlickerLeap\Square;
 
         <?php
             // output your diamond here
+            $diamond = new Diamond(10);
+            $diamond->draw();
         ?>
 
         <h2>Output your rectangle</h2>
 
         <?php
             // output your working rectangle here
+            $rectangle = new Rectangle(10);
+            $rectangle->draw();
         ?>
 
         <h2>Output the result of the API</h2>
