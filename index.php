@@ -81,9 +81,10 @@ use FlickerLeap\Square;
 
         <h2>Recommendations</h2>
 
-        <p>
-        
-        </p>
+        <ul>
+            <li> I would suggest some sort of front end task to test styling and maybe the use of a front-end framework </li>
+            <li> Add one database integration question to test basic database skills </li>
+        </ul>
 
     </body>
 </html>
